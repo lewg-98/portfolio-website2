@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional portfolio showcasing web development and design projects">
+    <meta name="keywords" content="web developer, portfolio, projects, frontend developer">
+    <meta name="author" content="Lewis Goode">
+    
+    <!-- Preload critical assets -->
+    <link rel="preload" href="css/style.min.css" as="style">
+    <link rel="preload" href="js/main.min.js" as="script">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    
+    <!-- Critical CSS inline -->
+    <style>
+        /* Add critical CSS here */
+        :root{--color-primary:#2563eb;--color-background:#ffffff;--color-text:#1e293b}
+        body{margin:0;font-family:system-ui,sans-serif;color:var(--color-text)}
+        .header{position:fixed;top:0;left:0;right:0;background-color:var(--color-background)}
+    </style>
+    
+    <!-- Defer non-critical CSS -->
+    <link rel="stylesheet" href="css/style.min.css" media="print" onload="this.media='all'">
+    
+    <!-- Open Graph tags -->
+    <meta property="og:title" content="Lewis Goode - Web Developer Portfolio">
+    <meta property="og:description" content="Professional portfolio showcasing web development and design projects">
+    <meta property="og:image" content="path/to/your/image.jpg">
+    <meta property="og:url" content="https://yourwebsite.com">
+    
+    <title>Lewis Goode - Web Developer Portfolio</title>
+</head>
+<body>
+    <!-- Header with Navigation -->
+    <header class="header" role="banner">
+        <nav class="nav" aria-label="Main navigation">
+            <div class="nav__brand">
+                <a href="/" class="nav__logo" aria-label="Lewis Goode">Lewis Goode</a>
+                <picture>
+                    <source srcset="images/dog_3.webp" type="image/webp">
+                    <source srcset="images/dog_3.jpg" type="image/jpeg"> 
+                    <img 
+                        src="images/dog_3.jpg"
+                        alt="Lewis Goode"
+                        class="nav__logo-image"
+                        width="48"
+                        height="48"
+                        loading="eager"
+                        decoding="async"
+                    >
+                </picture>
+            </div>
+            <ul class="nav__list" role="menubar">
+                <li class="nav__item" role="none">
+                    <a href="#about" class="nav__link" role="menuitem">About</a>
+                </li>
+                <li class="nav__item" role="none">
+                    <a href="#projects" class="nav__link" role="menuitem">Projects</a>
+                </li>
+                <li class="nav__item" role="none">
+                    <a href="#skills" class="nav__link" role="menuitem">Skills</a>
+                </li>
+                <li class="nav__item" role="none">
+                    <a href="#contact" class="nav__link" role="menuitem">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero__content">
+                <h1 class="hero__title">Web Developer & Designer</h1>
+                <p class="hero__subtitle">Creating beautiful and functional web experiences</p>
+                <a href="#contact" class="hero__cta button">Get in Touch</a>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about" id="about">
+            <div class="about__container">
+                <h2 class="about__title">About Me</h2>
+                <div class="about__content">
+                    <div class="about__text">
+                        <p class="about__description">I'm a web developer with a passion for creating beautiful and functional web experiences. I'm currently looking for a role where I can continue to learn and grow as a developer.</p>
+                    </div>
+                    <!-- Optimized image loading -->
+                    <picture>
+                        <source 
+                            srcset="images/dog_1.jpg 400w, 
+                                    images/dog_1.jpg 800w"
+                            type="image/webp"
+                        >
+                        <source 
+                            srcset="images/dog_1.jpg 400w, 
+                                    images/dog_1.jpg 800w"
+                            type="image/jpeg"
+                        >
+                        <img 
+                            src="images/dog_1.jpg"
+                            alt="This is me! Hello!"
+                            class="about__image"
+                            width="400"
+                            height="400"
+                            loading="lazy"
+                            decoding="async"
+                        >
+                    </picture>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="projects" id="projects" content-visibility="auto">
+            <div class="projects__container">
+                <h2 class="projects__title">Featured Projects</h2>
+                <div class="projects__grid">
+                    <!-- Project Card -->
+                    <article class="project-card">
+                        <div class="project-card__image-container">
+                            <picture>
+                                <source 
+                                    srcset="images/dog_2.jpg 400w,
+                                            images/dog_2.jpg 800w"
+                                    type="image/webp"
+                                >
+                                <img 
+                                    src="images/dog_2.jpg"
+                                    alt="Bringing Buster to Life"
+                                    class="project-card__image"
+                                    width="400"
+                                    height="225"
+                                    loading="lazy"
+                                    decoding="async"
+                                >
+                            </picture>
+                            <div class="project-card__overlay">
+                                <div class="project-card__links">
+                                    <a href="#" class="project-card__link">
+                                        <span class="project-card__link-icon">🔗</span>
+                                        Live Demo
+                                    </a>
+                                    <a href="#" class="project-card__link">
+                                        <span class="project-card__link-icon">📂</span>
+                                        GitHub
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="project-card__content">
+                            <h3 class="project-card__title">Making Happiness come to Life with AI</h3>
+                            <p class="project-card__description">
+                                This project uses AI to create personalised videos for users.
+                            </p>
+                            
+                            <ul class="project-card__tags">
+                                <li class="project-card__tag">React</li>
+                                <li class="project-card__tag">Node.js</li>
+                                <li class="project-card__tag">MongoDB</li>
+                                <li class="project-card__tag">Tailwind</li>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="skills" id="skills" content-visibility="auto">
+            <h2 class="skills__title">Technical Skills</h2>
+            <div class="skills__container">
+                <div class="skills__category">
+                    <h3 class="skills__category-title">Frontend</h3>
+                    <ul class="skills__list">
+                        <li class="skills__item">HTML5</li>
+                        <li class="skills__item">CSS3</li>
+                        <li class="skills__item">JavaScript</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact" id="contact" content-visibility="auto">
+            <h2 class="contact__title">Get in Touch</h2>
+            <form class="contact__form" method="POST" action="/submit">
+                <div class="contact__form-group">
+                    <label for="name" class="contact__label">Name</label>
+                    <input type="text" id="name" name="name" class="contact__input" required>
+                </div>
+                <div class="contact__form-group">
+                    <label for="email" class="contact__label">Email</label>
+                    <input type="email" id="email" name="email" class="contact__input" required>
+                </div>
+                <div class="contact__form-group">
+                    <label for="message" class="contact__label">Message</label>
+                    <textarea id="message" name="message" class="contact__textarea" required></textarea>
+                </div>
+                <button type="submit" class="contact__submit button">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer__content">
+            <p class="footer__text">&copy; 2024 Lewis Goode. All rights reserved.</p>
+            <div class="footer__social">
+                <a href="#" class="footer__social-link" aria-label="LinkedIn Profile">LinkedIn</a>
+                <a href="#" class="footer__social-link" aria-label="GitHub Profile">GitHub</a>
+                <a href="#" class="footer__social-link" aria-label="Twitter Profile">Twitter</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Deferred script loading -->
+    <script src="js/main.min.js" defer></script>
+</body>
+</html>
